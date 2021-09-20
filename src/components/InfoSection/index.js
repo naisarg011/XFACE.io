@@ -43,7 +43,7 @@ const InfoSection = ({
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
                 <BtnWrap>
-                  <Button
+                  <Button font-weight='600'
                     to="home"
                     dmooth={true}
                     duration={500}

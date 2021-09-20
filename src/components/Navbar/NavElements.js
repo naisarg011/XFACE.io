@@ -3,7 +3,7 @@ import { Link as LinkR } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
 export const Nav = styled.nav`
-  background: #000;
+  background: ${({ scrollNav }) => (scrollNav ? "#000" : "trasnparent")};
   height: 80px;
   margin-top: -80px;
   display: flex;
@@ -34,7 +34,8 @@ export const NavLogo = styled(LinkR)`
   justify-self: flex-start;
   cursor: pointer;
   display: flex;
-  font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 2.1rem;
   align-items: center;
   margin-left: 24px;
   font-weight: bold;
@@ -60,13 +61,11 @@ export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
-  margin-left : auto;
+  margin-left: auto;
   text-align: center;
   margin-right: -22px;
 
-  
-
-  @media screen and (max-width: 786px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
@@ -83,8 +82,10 @@ export const NavLinks = styled(LinkS)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
 
-  &.active {
-    border-bottom: 3px solid #01bf71;
+  &:active {
+    border-bottom: 3px solid #10bf71;
   }
 `;

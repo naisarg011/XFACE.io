@@ -4,7 +4,7 @@ import { HeroContainer, HeroBg, VideoBg, HeroH1, HeroP, HeroContent } from "./He
 
 const HeroSection = () => {
   return (
-    <HeroContainer>
+    <HeroContainer id='/a'>
       <HeroBg>
         <VideoBg autoPlay loop muted src={Video} type="video/mp4"></VideoBg>
       </HeroBg>
